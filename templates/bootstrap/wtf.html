@@ -1,0 +1,11 @@
+{# templates/bootstrap/wtf.html #}
+{% macro quick_form(form) %}
+<form method="POST">
+    {{ form.hidden_tag() }}
+    <div class="form-group">
+        {{ form.name.label(class='form-label') }}
+        {{ form.name(id='my-text-field', class='form-control') }}
+    </div>
+    {{ form.submit(class='btn btn-primary') }}
+</form>
+{% endmacro %}
