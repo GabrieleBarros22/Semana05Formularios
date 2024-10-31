@@ -4,10 +4,9 @@ from flask_bootstrap import Bootstrap
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField
 from wtforms.validators import DataRequired
-import secrets  # Importa a biblioteca secrets
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = secrets.token_hex(16)  # Gera uma chave secreta aleatória
+app.config['SECRET_KEY'] = 'abc123'
 Bootstrap(app)
 
 class NameForm(FlaskForm):
